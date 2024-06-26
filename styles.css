@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: black;
+    font-family: 'Pathway Gothic One', sans-serif;
+    color: #feda4a;
+}
+
+.star-wars-intro {
+    perspective: 400px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.intro-text {
+    font-size: 2rem;
+    text-align: center;
+    animation: fadeIn 5s ease-in-out 1;
+}
+
+#play-button {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #feda4a;
+    border: none;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#play-button:hover {
+    background-color: #e5b700;
+}
+
+.star-wars {
+    width: 80%;
+    max-width: 800px;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    color: #feda4a;
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: justify;
+    perspective: 400px;
+    display: none; /* Hide initially */
+}
+
+.crawl {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: auto;
+    transform-origin: 50% 100%;
+    animation: crawl 60s linear infinite;
+}
+
+.crawl .title {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.crawl .title h1 {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+
+@keyframes crawl {
+    0% {
+        top: 100%;
+        transform: rotateX(20deg) translateZ(0);
+    }
+    100% {
+        top: -200%;
+        transform: rotateX(25deg) translateZ(-1500px);
+    }
+}
